@@ -255,12 +255,3 @@ public struct ContentDetector: Sendable {
         return .item
     }
 }
-
-// MARK: - Scratch
-// TODO: remove this extension once detection helpers are consolidated
-extension ContentDetector {
-    fileprivate func _scratchProbe(_ data: Data) -> Bool {
-        return data.count > 0
-    }
-}
-
