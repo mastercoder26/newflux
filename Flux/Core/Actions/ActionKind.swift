@@ -5,6 +5,8 @@ public enum ActionKind: String, Codable, CaseIterable, Identifiable, Sendable {
     case cleanWhitespace
     case removeBlankLines
     case convertCase
+    case base64Encode
+    case urlEncode
     
     // JSON
     case prettyJSON
@@ -36,6 +38,8 @@ public enum ActionKind: String, Codable, CaseIterable, Identifiable, Sendable {
         case .cleanWhitespace: return "Clean Whitespace"
         case .removeBlankLines: return "Remove Blank Lines"
         case .convertCase: return "Change Case"
+        case .base64Encode: return "Base64 Encode / Decode"
+        case .urlEncode: return "URL Encode / Decode"
         case .prettyJSON: return "Format JSON"
         case .minifyJSON: return "Minify JSON"
         case .cleanURL: return "Clean URL"
@@ -57,6 +61,8 @@ public enum ActionKind: String, Codable, CaseIterable, Identifiable, Sendable {
         case .cleanWhitespace: return "wand.and.stars"
         case .removeBlankLines: return "arrow.up.and.down.text.horizontal"
         case .convertCase: return "textformat"
+        case .base64Encode: return "squaregrid.2x2"
+        case .urlEncode: return "link.circle"
         case .prettyJSON: return "curlybraces"
         case .minifyJSON: return "arrow.right.arrow.left"
         case .cleanURL: return "link.badge.plus"

@@ -56,6 +56,44 @@ public final class ActionRegistry: @unchecked Sendable {
             )
         )
         
+        register(
+            Base64Action(),
+            descriptor: ActionDescriptor(
+                kind: .base64Encode,
+                title: "Base64 Encode / Decode",
+                subtitle: "Encode text to or decode from Base64",
+                systemImage: "squaregrid.2x2",
+                acceptedKinds: [.text],
+                parameters: [
+                    ActionParameterDescriptor(
+                        key: "mode",
+                        label: "Mode",
+                        type: .selection(["Encode", "Decode"]),
+                        defaultValue: "Encode"
+                    )
+                ]
+            )
+        )
+
+        register(
+            URLEncodeAction(),
+            descriptor: ActionDescriptor(
+                kind: .urlEncode,
+                title: "URL Encode / Decode",
+                subtitle: "Percent-encode or decode URLs and text",
+                systemImage: "link.circle",
+                acceptedKinds: [.text, .url],
+                parameters: [
+                    ActionParameterDescriptor(
+                        key: "mode",
+                        label: "Mode",
+                        type: .selection(["Encode", "Decode"]),
+                        defaultValue: "Encode"
+                    )
+                ]
+            )
+        )
+
         // JSON Actions
         register(
             PrettyJSONAction(),
