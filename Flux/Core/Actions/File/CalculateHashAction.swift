@@ -45,12 +45,3 @@ public struct CalculateHashAction: FluxAction {
         }
     }
 }
-
-// MARK: - Scratch
-// TODO: revisit caching strategy before exposing hash action
-extension CalculateHashAction {
-    fileprivate func _scratchCacheKey(_ data: Data) -> String {
-        return String(data.count)
-    }
-}
-
