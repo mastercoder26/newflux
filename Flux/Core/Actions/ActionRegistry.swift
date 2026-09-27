@@ -94,6 +94,50 @@ public final class ActionRegistry: @unchecked Sendable {
             )
         )
 
+        register(
+            SortLinesAction(),
+            descriptor: ActionDescriptor(
+                kind: .sortLines,
+                title: "Sort Lines",
+                subtitle: "Sort lines ascending or descending",
+                systemImage: "text.line.first.and.arrowtriangle.forward",
+                acceptedKinds: [.text],
+                parameters: [
+                    ActionParameterDescriptor(
+                        key: "order",
+                        label: "Order",
+                        type: .selection(["Ascending", "Descending"]),
+                        defaultValue: "Ascending"
+                    ),
+                    ActionParameterDescriptor(
+                        key: "trim",
+                        label: "Trim Each Line",
+                        type: .boolean,
+                        defaultValue: "false"
+                    )
+                ]
+            )
+        )
+
+        register(
+            ReverseTextAction(),
+            descriptor: ActionDescriptor(
+                kind: .reverseText,
+                title: "Reverse Text",
+                subtitle: "Reverse characters or line-by-line",
+                systemImage: "arrow.left.arrow.right",
+                acceptedKinds: [.text],
+                parameters: [
+                    ActionParameterDescriptor(
+                        key: "byLine",
+                        label: "Reverse Per Line",
+                        type: .boolean,
+                        defaultValue: "false"
+                    )
+                ]
+            )
+        )
+
         // JSON Actions
         register(
             PrettyJSONAction(),

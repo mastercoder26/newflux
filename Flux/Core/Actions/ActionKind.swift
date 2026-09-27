@@ -7,6 +7,8 @@ public enum ActionKind: String, Codable, CaseIterable, Identifiable, Sendable {
     case convertCase
     case base64Encode
     case urlEncode
+    case sortLines
+    case reverseText
     
     // JSON
     case prettyJSON
@@ -40,6 +42,8 @@ public enum ActionKind: String, Codable, CaseIterable, Identifiable, Sendable {
         case .convertCase: return "Change Case"
         case .base64Encode: return "Base64 Encode / Decode"
         case .urlEncode: return "URL Encode / Decode"
+        case .sortLines: return "Sort Lines"
+        case .reverseText: return "Reverse Text"
         case .prettyJSON: return "Format JSON"
         case .minifyJSON: return "Minify JSON"
         case .cleanURL: return "Clean URL"
@@ -63,6 +67,8 @@ public enum ActionKind: String, Codable, CaseIterable, Identifiable, Sendable {
         case .convertCase: return "textformat"
         case .base64Encode: return "squaregrid.2x2"
         case .urlEncode: return "link.circle"
+        case .sortLines: return "text.line.first.and.arrowtriangle.forward"
+        case .reverseText: return "arrow.left.arrow.right"
         case .prettyJSON: return "curlybraces"
         case .minifyJSON: return "arrow.right.arrow.left"
         case .cleanURL: return "link.badge.plus"
