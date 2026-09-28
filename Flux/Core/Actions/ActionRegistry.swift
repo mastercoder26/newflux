@@ -390,4 +390,16 @@ public final class ActionRegistry: @unchecked Sendable {
         defer { lock.unlock() }
         return Array(actions.values).sorted { $0.id.displayName < $1.id.displayName }
     }
+
+    public var actionCount: Int {
+        lock.lock()
+        defer { lock.unlock() }
+        return actions.count
+    }
+
+    public func contains(_ kind: ActionKind) -> Bool {
+        lock.lock()
+        defer { lock.unlock() }
+        return actions[kind] != nil
+    }
 }
