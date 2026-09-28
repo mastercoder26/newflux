@@ -157,6 +157,17 @@ public final class ActionRegistry: @unchecked Sendable {
             )
         )
 
+        register(
+            CountLinesAction(),
+            descriptor: ActionDescriptor(
+                kind: .countLines,
+                title: "Count Lines",
+                subtitle: "Count lines, words, and characters",
+                systemImage: "text.line.3",
+                acceptedKinds: [.text]
+            )
+        )
+
         // JSON Actions
         register(
             PrettyJSONAction(),
