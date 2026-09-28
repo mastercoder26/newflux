@@ -207,6 +207,7 @@ public final class PaletteViewModel: ObservableObject {
                 self.isProcessing = false
                 self.errorMessage = error.localizedDescription
                 self.workflowProgress = WorkflowProgress(stepIndex: 0, totalSteps: 1, actionTitle: action.title, status: .failed(error.localizedDescription))
+                self.mode = .content
             }
         }
     }
@@ -279,6 +280,7 @@ public final class PaletteViewModel: ObservableObject {
             } catch {
                 self.isProcessing = false
                 self.errorMessage = error.localizedDescription
+                self.mode = .content
             }
         }
     }

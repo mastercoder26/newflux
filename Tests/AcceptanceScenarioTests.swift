@@ -60,9 +60,9 @@ final class AcceptanceScenarioTests: XCTestCase {
         let ocrAction = try XCTUnwrap(viewModel.compatibleActions.first(where: { $0.id == .ocr }))
         viewModel.selectAction(ocrAction)
         
-        // Wait for async OCR (cold start Vision model loading may take up to 7-10s)
+        // Wait for async OCR (cold start Vision model loading can take ~20s on first run)
         var attempts = 0
-        while viewModel.mode != .result && attempts < 50 {
+        while viewModel.mode != .result && attempts < 300 {
             try await Task.sleep(nanoseconds: 100_000_000)
             attempts += 1
         }
