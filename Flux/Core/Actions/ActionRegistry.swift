@@ -138,6 +138,25 @@ public final class ActionRegistry: @unchecked Sendable {
             )
         )
 
+        register(
+            SlugifyAction(),
+            descriptor: ActionDescriptor(
+                kind: .slugify,
+                title: "Slugify",
+                subtitle: "Convert text to a URL-safe slug",
+                systemImage: "number",
+                acceptedKinds: [.text],
+                parameters: [
+                    ActionParameterDescriptor(
+                        key: "separator",
+                        label: "Separator",
+                        type: .string,
+                        defaultValue: "-"
+                    )
+                ]
+            )
+        )
+
         // JSON Actions
         register(
             PrettyJSONAction(),
