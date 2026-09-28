@@ -10,7 +10,6 @@ public enum ActionKind: String, Codable, CaseIterable, Identifiable, Sendable {
     case sortLines
     case reverseText
     case slugify
-    case countLines
     
     // JSON
     case prettyJSON
@@ -47,7 +46,6 @@ public enum ActionKind: String, Codable, CaseIterable, Identifiable, Sendable {
         case .sortLines: return "Sort Lines"
         case .reverseText: return "Reverse Text"
         case .slugify: return "Slugify"
-        case .countLines: return "Count Lines"
         case .prettyJSON: return "Format JSON"
         case .minifyJSON: return "Minify JSON"
         case .cleanURL: return "Clean URL"
@@ -74,7 +72,6 @@ public enum ActionKind: String, Codable, CaseIterable, Identifiable, Sendable {
         case .sortLines: return "text.line.first.and.arrowtriangle.forward"
         case .reverseText: return "arrow.left.arrow.right"
         case .slugify: return "number"
-        case .countLines: return "text.line.3"
         case .prettyJSON: return "curlybraces"
         case .minifyJSON: return "arrow.right.arrow.left"
         case .cleanURL: return "link.badge.plus"
