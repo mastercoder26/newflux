@@ -22,6 +22,10 @@ public struct Base64Action: FluxAction {
             throw ActionError.unsupportedContent
         }
 
+        // Empty input has no meaningful encoding or decoding; return early to
+        // avoid passing an empty payload through the codec paths.
+        if string.isEmpty { return .text("") }
+
         let mode = configuration.string(for: "mode", default: "encode").lowercased()
         let result: String
         switch mode {

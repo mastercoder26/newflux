@@ -26,6 +26,10 @@ public struct URLEncodeAction: FluxAction {
         default: throw ActionError.unsupportedContent
         }
 
+        // Empty input encodes to itself; skip the codec so we don't surface
+        // a confusing percent-encoded empty string to the user.
+        if input.isEmpty { return .text("") }
+
         let mode = configuration.string(for: "mode", default: "encode").lowercased()
         let result: String
         switch mode {
