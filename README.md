@@ -1,11 +1,11 @@
 # Flux
 > Universal local transformation palette for macOS.
 
-![GitHub release (latest by date including pre-releases)](https://img.shields.io/github/v/release/Creator101-commits/flux?include_prereleases)
-![GitHub last commit](https://img.shields.io/github/last-commit/Creator101-commits/flux)
-![GitHub issues](https://img.shields.io/github/issues-raw/Creator101-commits/flux)
-![GitHub pull requests](https://img.shields.io/github/issues-pr/Creator101-commits/flux)
-![GitHub](https://img.shields.io/github/license/Creator101-commits/flux)
+![GitHub release (latest by date including pre-releases)](https://img.shields.io/github/v/release/mastercoder26/newflux?include_prereleases)
+![GitHub last commit](https://img.shields.io/github/last-commit/mastercoder26/newflux)
+![GitHub issues](https://img.shields.io/github/issues-raw/mastercoder26/newflux)
+![GitHub pull requests](https://img.shields.io/github/issues-pr/mastercoder26/newflux)
+![GitHub](https://img.shields.io/github/license/mastercoder26/newflux)
 
 Flux is a native macOS transformation palette that turns text, URLs, images, PDFs, and files into useful outputs without leaving your keyboard. A user invokes a global keyboard shortcut, pastes or drops content into a floating panel, Flux automatically detects the content type, and presents only compatible local actions.
 
@@ -72,7 +72,7 @@ single action   workflow
 ### Build from Source
 
 ```sh
-git clone https://github.com/Creator101-commits/flux.git
+git clone https://github.com/mastercoder26/newflux.git
 cd flux
 swift build -c release
 ```
@@ -89,7 +89,7 @@ The compiled binary will be located at `.build/release/Flux`.
 - **Automatic Content Detection**:
   - URLs: Strips marketing query parameters (`utm_*`, `fbclid`, `gclid`), generates QR codes, outputs Markdown links.
   - JSON: Validates formatting, pretty-prints with sorted keys, or minifies payloads.
-  - Text: Cleans extra whitespace, collapses blank lines, transforms casing (uppercase, lowercase, title case).
+  - Text: Cleans extra whitespace, collapses blank lines, transforms casing (uppercase, lowercase, title case), sorts lines, reverses text, Base64 and URL percent encode/decode, and slugifies into URL-safe slugs.
   - Images: Resizes with aspect ratio preservation, converts between PNG and JPEG, compresses JPEG with configurable quality, and performs offline OCR using Apple Vision.
   - PDFs: Merges multiple documents into one, extracts specified page ranges (e.g. `1-3, 5, 8-10`).
   - Files: Computes incremental SHA-256 digests.
@@ -153,7 +153,7 @@ swift run Flux
 
 Contributions are welcome. To propose a change:
 
-1. Fork it (<https://github.com/Creator101-commits/flux/fork>)
+1. Fork it (<https://github.com/mastercoder26/newflux/fork>)
 2. Create your feature branch (`git checkout -b feature/newAction`)
 3. Commit your changes (`git commit -m 'feat: add new action'`)
 4. Push to the branch (`git push origin feature/newAction`)
@@ -182,4 +182,4 @@ Distributed under the MIT License. See [`LICENSE`](./LICENSE) for more informati
 
 Sreeharsha Kannegundla – [@Creator101-commits](https://github.com/Creator101-commits)
 
-Project link: [https://github.com/Creator101-commits/flux](https://github.com/Creator101-commits/flux)
+Project link: [https://github.com/mastercoder26/newflux](https://github.com/mastercoder26/newflux)
